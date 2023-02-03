@@ -1,0 +1,18 @@
+digraph {
+    rankdir=LR
+    Q0[shape=doublecircle]
+    Q4[color=blue]
+
+    Q1 -> Q0 [label=a]
+    Q2 -> Q0 [label=b]
+    Q1 -> Q1 [label=a]
+    Q2 -> Q1 [label=b]
+    Q1 -> Q2 [label=a]
+    Q3 -> Q2 [label=b]
+    Q4 -> Q3 [label=a]
+    Q5 -> Q3 [label=b]
+    Q1 -> Q4 [label=a]
+    Q3 -> Q4 [label=b]
+    Q4 -> Q5 [label=a]
+    Q2 -> Q5 [label=b]
+}

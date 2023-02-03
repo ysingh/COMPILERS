@@ -1,0 +1,14 @@
+digraph {
+    rankdir=LR
+    q1 [color=blue]
+    q3 [shape=doublecircle]
+    q6 [shape=doublecircle]
+
+    q1 -> q2 [label = "1"]
+    q2 -> q3 [label = "0, 1"]
+    q3 -> q2 [label = "0,1"]
+    q1 -> q4 [label = "0"]
+    q4 -> q5 [label = "0, 1"]
+    q5 -> q6 [label = "0, 1"]
+    q6 -> q4 [label = "0, 1"]
+}
