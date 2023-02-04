@@ -1,7 +1,7 @@
 grammar Tiger;
 
 WS : [ \t\r\n]+ -> skip;
-COMMENT : '/*' [^/*-*/]*  '*/' -> skip;
+COMMENT :  '/*' .*? '*/'  -> skip;
 
 tigerProgram: PROGRAM ID LET declarationSegment BEGIN functList END EOF;
 valueTail: OPENBRACK expr CLOSEBRACK | ;
@@ -121,4 +121,4 @@ TASSIGN: '='    ;
 //Special Lexical Rules
 ID: [a-zA-Z][a-zA-Z0-9_]* ;
 INTLIT: '0'|[1-9]([0-9]*);
-FLOATLIT: [0-9]*'.'[0-9]*;
+FLOATLIT: [0]'.'[0-9]*|([1-9]+([0]+)? '.' [0-9]*);
